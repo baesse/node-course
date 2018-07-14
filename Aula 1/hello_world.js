@@ -11,7 +11,6 @@ var server = http.createServer(function (req, res) {
             break;
         default:
             res.end("<html><body>Portal de default</body></html>")
-
     }
 });
 server.listen(3000);
