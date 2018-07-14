@@ -1,15 +1,7 @@
-var express= require('express')
-var app=express();
-app.set('view engine','ejs')
-app.get('/',function(req,res){
-    res.send("<html><body>Portal de noticias de tecnologia</body></html>")
-    
-})
-app.get('/tecnologia',function(req,res){
-    res.render('secao/tecnologia')
-})
-
-
+var app = require('./config/server')
+var rotaNoticias=require('./app/routes/noticias')(app);
+var rotaFormularioInclusao=require('./app/routes/formulario_inclusao_noticia')(app);
+var rotaHome=require('./app/routes/home')(app);
 app.listen(3000,function(){
-    console.log('funcionou')
+    console.log('Server running')
 })

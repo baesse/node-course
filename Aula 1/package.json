@@ -18,6 +18,7 @@
   "homepage": "https://github.com/satsnik/node-course#readme",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mysql": "file:node_modules/mysql"
   }
 }
