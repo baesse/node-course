@@ -1,10 +1,15 @@
 var mysql = require('mysql');
-
-module.exports = function(){
+var connMysql=function(){    
+    console.log('conexao estabelecida')
     return connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'portal_noticias'
+        database: 'node_course'
     });
+   
+}
+
+module.exports = function(){
+    return connMysql
 }
